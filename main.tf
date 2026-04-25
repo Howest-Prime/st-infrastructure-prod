@@ -17,6 +17,9 @@ provider "azurerm" {
   tenant_id = var.howestprime_tenant_id
   client_id = var.service_principal_terraform_client_id
   client_secret = var.service_principal_terraform_secret
+  resource_provider_registrations = "none"
+  resource_providers_to_register  = ["Microsoft.App"]
+
 
     features {
         key_vault {

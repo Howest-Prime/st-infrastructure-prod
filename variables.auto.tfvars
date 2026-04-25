@@ -6,8 +6,9 @@ howestprime_azure_resource_names = {
   azurerm_container_registry_howestprime = "wideacrhowestprime"
   azurerm_cloudamqp_instance_secret   = "cloudamqp-message-broker-instance-secret"
   azurerm_log_analytics_workspace               = "howestprime-wide-p-law"
+  azurerm_container_enviroment              = "howestprime-wide-p-ace"
 }
 
 howestprime_cloudamqp_resource_names = {
-  message_broker_name_howestprime = "CLOUDAMQP"
+  message_broker_name_howestprime = "cloudamqp"
 }

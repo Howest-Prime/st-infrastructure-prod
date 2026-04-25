@@ -1,0 +1,8 @@
+
+## auto generated
+*.terraform*
+terraform.tfstate
+*.tfstate.*
+
+## secrets
+variables.sensitive.auto.tfvars

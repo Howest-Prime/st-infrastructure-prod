@@ -47,3 +47,17 @@ variable "howestprime_azure_resource_names" {
     nullable = true
     sensitive = false
 }
+
+variable "howestprime_cloudamqp_customer_api_key" {
+    type = string
+    description = "CLOUDAMQP API Key"
+    nullable = false
+    sensitive = true
+}
+
+variable "howestprime_cloudamqp_resource_names" {
+    type = map(string)
+    description = "Map of CloudAMQP resource names"
+    nullable = true
+    sensitive = false
+}

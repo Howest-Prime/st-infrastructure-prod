@@ -20,3 +20,10 @@ resource "azurerm_role_assignment" "terraform-key-vault-admin" {
     principal_id            = var.service_principal_terraform_sp_id
     depends_on              = [azurerm_key_vault.howestprime-wide-p-akv]
 }
+
+resource "azurerm_key_vault_secret" "CLOUDAMQP_instance_secret" {
+    name                    = var.howestprime_azure_resource_names["azurerm_cloudamqp_instance_secret"]
+    value                   = data.cloudamqp_credentials.local-admin.password
+    key_vault_id            = azurerm_key_vault.howestprime-wide-p-akv.id
+    depends_on              = [azurerm_role_assignment.terraform-key-vault-admin]
+}

@@ -7,6 +7,7 @@ howestprime_azure_resource_names = {
   azurerm_cloudamqp_instance_secret   = "cloudamqp-message-broker-instance-secret"
   azurerm_log_analytics_workspace               = "howestprime-wide-p-law"
   azurerm_container_enviroment              = "howestprime-wide-p-ace"
+  azurerm_managed_container = "howestprime-wide-p-mi-keyvaultreader"
 }
 
 howestprime_cloudamqp_resource_names = {

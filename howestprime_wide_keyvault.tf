@@ -24,8 +24,8 @@ resource "azurerm_role_assignment" "terraform-key-vault-admin" {
 }
 
 resource "azurerm_key_vault_secret" "CLOUDAMQP_instance_secret" {
-    name                    = var.howestprime_azure_resource_names["azurerm_cloudamqp_instance_secret"]
-    value                   = data.cloudamqp_credentials.local-admin.password
-    key_vault_id            = azurerm_key_vault.howestprime-wide-p-akv.id
-    depends_on              = [azurerm_role_assignment.terraform-key-vault-admin]
+  name                      = var.howestprime_azure_resource_names["azurerm_cloudamqp_instance_secret"]
+  value                     = data.cloudamqp_credentials.local-admin.password
+  key_vault_id              = azurerm_key_vault.howestprime-wide-p-akv.id
+  depends_on                = [azurerm_role_assignment.mi_keyvault_secrets_officer] 
 }

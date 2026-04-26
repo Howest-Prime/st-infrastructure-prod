@@ -8,8 +8,5 @@ resource "azurerm_role_assignment" "mi_keyvault_secrets_officer" {
   scope                = azurerm_key_vault.howestprime-wide-p-akv.id
   role_definition_name = "Key Vault Secrets Officer"
   principal_id         = azurerm_user_assigned_identity.howestprime-wide-p-mi-keyvaultreader.principal_id
-
-  depends_on = [
-    azurerm_key_vault.howestprime-wide-p-akv
-  ]
+  depends_on           = [azurerm_role_assignment.terraform-key-vault-admin]
 }

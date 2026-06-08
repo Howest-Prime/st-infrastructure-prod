@@ -105,3 +105,11 @@ variable "howestprime_github_backoffice_repository" {
     nullable    = false
     sensitive   = false
 }
+
+
+variable "howestprime_github_ticketing_repository" {
+    description = "GitHub repository name for the ticketing microservice"
+    type        = string
+    nullable    = false
+    sensitive   = false
+}

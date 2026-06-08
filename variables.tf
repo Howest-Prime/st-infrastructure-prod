@@ -61,3 +61,40 @@ variable "howestprime_cloudamqp_resource_names" {
     nullable = true
     sensitive = false
 }
+
+variable "howestprime_usernames" {
+    type = map(string)
+    description = "Map of usernames"
+    nullable = true
+    sensitive = false
+}
+
+variable "howestprime_allowed_ip_ranges" {
+  description = "List allowed IP addresses for documentDB firewall rule"
+  type = list(object({
+    name             = string
+    start_ip_address = string
+    end_ip_address   = string
+  }))
+}
+
+variable "howestprime_github_token" {
+    description = "GitHub personal access token"
+    type        = string
+    nullable    = false
+    sensitive   = true
+}
+
+variable "howestprime_github_organisation" {
+    description = "GitHub organization or owner name"
+    type        = string
+    nullable    = false
+    sensitive   = true
+}
+
+variable "howestprime_github_movies_repository" {
+    description = "GitHub repository name for the movies microservice"
+    type        = string
+    nullable    = false
+    sensitive   = false
+}

@@ -26,3 +26,17 @@ resource "azuread_application_password" "github_ci_cd_secret" {
     azuread_service_principal.github_ci_cd_sp
   ]
 }
+
+resource "azurerm_role_assignment" "github_container_registry_push_access" {
+  role_definition_name = "AcrPush"
+  scope                = azurerm_container_registry.howestprimewideacr.id
+  principal_id         = azuread_service_principal.github_ci_cd_sp.object_id
+  depends_on           = [azurerm_key_vault.howestprime-wide-p-akv]
+}
+
+resource "azurerm_role_assignment" "github_resource_group_contributor" {
+  role_definition_name = "Contributor"
+  scope                = azurerm_resource_group.howestprime-wide-p-arg.id
+  principal_id         = azuread_service_principal.github_ci_cd_sp.object_id
+  depends_on           = [azurerm_key_vault.howestprime-wide-p-akv]
+}

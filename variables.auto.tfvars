@@ -13,6 +13,9 @@ howestprime_azure_resource_names = {
   azurerm_movies_db_movies = "movies"
 
   azurerm_key_vault_secret_movies_db = "movies-db-password"
+
+  azurerm_client_backoffice_service_plan = "client-backoffice-service-plan"
+  azurerm_client_backoffice_web_app = "client-backoffice-web-app"
 }
 
 howestprime_cloudamqp_resource_names = {
@@ -33,4 +36,6 @@ howestprime_allowed_ip_ranges = [
 
 howestprime_github_organisation       = "Howest-TI-Project-BnD"
 howestprime_github_movies_repository  = "st-microservice-movies-sumanadhikari-howest-1"
+howestprime_github_backoffice_repository = "st-client-backoffice-sumanadhikari-howest"
+
 

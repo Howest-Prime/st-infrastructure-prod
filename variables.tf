@@ -98,3 +98,10 @@ variable "howestprime_github_movies_repository" {
     nullable    = false
     sensitive   = false
 }
+
+variable "howestprime_github_backoffice_repository" {
+    description = "GitHub repository name for the movies microservice"
+    type        = string
+    nullable    = false
+    sensitive   = false
+}

@@ -113,3 +113,17 @@ variable "howestprime_github_ticketing_repository" {
     nullable    = false
     sensitive   = false
 }
+
+variable "howestprime_ticketing_api_url" {
+    description = "Base URL of the ticketing container app"
+    type        = string
+    nullable    = false
+    sensitive   = false
+}
+
+variable "howestprime_movies_api_url" {
+    description = "Base URL of the movies container app"
+    type        = string
+    nullable    = false
+    sensitive   = false
+}

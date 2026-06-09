@@ -47,7 +47,7 @@ howestprime_github_backoffice_repository = "st-client-backoffice-sumanadhikari-h
 howestprime_github_ticketing_repository  = "st-microservice-ticketing-sumanadhikari-howest"
 
 howestprime_ticketing_api_url = ""
-howestprime_movies_api_url    = ""
+howestprime_movies_api_url    = "https://microservice-movies.icydesert-128767c2.francecentral.azurecontainerapps.io/"
 
 
 
